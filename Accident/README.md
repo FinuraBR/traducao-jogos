@@ -80,4 +80,4 @@ Agora vamos colocar o arquivo de texto traduzido.
 *   **Tradução e Revisão:** ツ⁧⁧FinuraBR & IA
 *   **Ferramentas:**
     *   [BepInEx](https://github.com/BepInEx/BepInEx)
-    *   [XUnity.AutoTranslator](https://github.com/bbepis/XUnity.AutoTranslator)
+    *   [XUnity AutoTranslator](https://github.com/bbepis/XUnity.AutoTranslator)
