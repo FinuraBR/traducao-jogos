@@ -1,6 +1,7 @@
 # Tradução / Open-Source - 3 out of 10: Season 1 (PT-BR)
 
-**Status do Projeto:** ⚠️ Jogável / Revisão Manual Pendente
+**Status do Projeto:** ⚠️ Jogável / Revisão Manual Pendente 
+
 **Traduzido por:** ツFinuraBR
 
 ---
@@ -52,3 +53,8 @@ O fluxo de tradução segue estritamente esta ordem para garantir a integridade 
 - **UAssetGUI:** Para converter arquivos `.uasset` (DataTables) em JSON e vice-versa.
 - **UnrealPak:** Para empacotar o mod final.
 - **Python + IA:** Para automação da tradução.
+
+### 📜 Licença e Créditos
+Este projeto é de código aberto para a comunidade. A única exigência caso você continue o projeto, publique atualizações ou crie um instalador automático no futuro é **manter o meu nome nos créditos como criador original da base da tradução**.
+
+**Créditos Iniciais:** ツFinuraBR
