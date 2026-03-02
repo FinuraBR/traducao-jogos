@@ -8,13 +8,11 @@
 
 ## 📌 Estado Atual da Tradução
 
-- **Tradução via IA (Revisão Manual Pendente):** No momento, os textos passaram apenas por verificação automática.
-    - **Inconsistências:** Podem ocorrer variações de termos (ex: "Achievement" pode aparecer como "Conquista Desbloqueada" em um lugar e "Conquista Obtida" em outro).
-- **Progresso por Episódio:**
+- **Progresso:**
 
 | Episódio | Status | Obs. |
 | :--- | :---: | :--- |
-| **Episódio 1** | ✅ Concluído | Traduzido (Revisão Manual Pendente) |
+| **Episódio 1** | ✅ Concluído | Revisão Manual Pendente |
 | **Episódio 2** | 🔄 Em Andamento ||
 | **Episódio 3** | ❌ Pendente ||
 | **Episódio 4** | ❌ Pendente ||
