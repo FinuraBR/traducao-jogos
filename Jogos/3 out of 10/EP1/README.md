@@ -12,8 +12,8 @@
 
 | Episódio | Status | Obs. |
 | :--- | :---: | :--- |
-| **Episódio 1** | ✅ Concluído | Revisão Manual Pendente |
-| **Episódio 2** | 🔄 Em Andamento ||
+| **Episódio 1** | 🔄 Em Andamento | Revisão Manual Pendente |
+| **Episódio 2** | ❌ Pendente ||
 | **Episódio 3** | ❌ Pendente ||
 | **Episódio 4** | ❌ Pendente ||
 | **Episódio 5** | ❌ Pendente ||
