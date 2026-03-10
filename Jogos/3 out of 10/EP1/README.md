@@ -1,6 +1,6 @@
 # Tradução / Open-Source - 3 out of 10 EP1 (PT-BR)
 
-**Status do Projeto:** ⚠️ Injogável / só nao exclui, pois quero preservar os script q usei 
+**Status do Projeto:** ✅ Jogável / Tradução mal feita. fiz apenas para eu entender um pouco do jogo 
 
 **Traduzido por:** ツFinuraBR
 
