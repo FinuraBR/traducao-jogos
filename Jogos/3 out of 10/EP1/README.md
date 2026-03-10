@@ -1,18 +1,14 @@
-# Tradução / Open-Source - 3 out of 10 EP1 (PT-BR)
-
-**Status do Projeto:** ✅ Jogável / Tradução mal feita. fiz apenas para eu entender um pouco do jogo 
-
-**Traduzido por:** ツFinuraBR
+# Tradução / Open-Source - 3 out of 10 (PT-BR)
 
 ---
 
-## 📌 Estado Atual da Tradução
+## 📌 Progresso e Status
 
-- **Progresso:**
+O projeto visa entregar uma **base funcional** para todos os episódios. O conteúdo traduzido é compreensível para a progressão e entendimento da história, servindo como ponto de partida para possíveis refinamentos futuros pela comunidade (ou por mim kk).
 
-| Episódio | Status | Obs. |
+| Episódio | Status | Observação |
 | :--- | :---: | :--- |
-| **Episódio 1** | ✅ Concluido | Tradução mal feita. fiz apenas para eu entender um pouco do jogo |
+| **Episódio 1** | ✅ Concluido ||
 | **Episódio 2** | ⌛ Em Andamento ||
 | **Episódio 3** | ❌ Pendente ||
 | **Episódio 4** | ❌ Pendente ||
@@ -20,37 +16,40 @@
 
 ---
 
-## 🛠️ Como Instalar a Tradução (Para Jogadores)
+## 🛠️ Instalação (Para Jogadores)
 
-A instalação foi feita para ser a mais simples possível.
-
-1. Vá até a aba **[Releases](https://github.com/FinuraBR/traducao-jogos-e-guias/releases/tag/3-out-of-10-EP1)** (lado direito da página) e baixe a versão `.zip` mais recente.
-2. Abra a pasta onde o seu jogo está instalado (A **pasta raiz**, onde fica o arquivo `ThreeTen.exe`).
-3. Extraia todo o conteúdo do `.zip` baixado para dentro dessa pasta.
-4. Abra o jogo e divirta-se! A tradução deve carregar automaticamente.
+1. Acesse a aba **[Releases](https://github.com/FinuraBR/traducao-jogos-e-guias/releases/tag/3-out-of-10)** e baixe o arquivo `.zip` mais recente.
+2. Dentro do arquivo baixado, as traduções estarão organizadas em pastas específicas (ex: `EP1`, `EP2`, etc.).
+3. Localize a pasta raiz da instalação do jogo (onde se encontra o executável `ThreeTen.exe`).
+4. Extraia o conteúdo da pasta do episódio desejado para dentro dessa pasta raiz.
 
 ---
 
-## 🤝 Workflow e Scripts (Para Desenvolvedores/Tradutores)
+## 🤝 Workflow e Estrutura Técnica (Para Desenvolvedores)
 
-Se você tem interesse em como essa tradução foi feita ou quer ajudar a melhorar os scripts, aqui está o fluxo de trabalho que utilizei. O processo é automatizado em Python para lidar com arquivos da Unreal Engine (`.locres` e `.uasset` convertidos para `.json`).
+O fluxo de trabalho foi unificado para processar todos os episódios sob uma única estrutura de scripts. Embora o processo possua diversas etapas para garantir a estabilidade dos arquivos, abaixo segue uma visão geral do método utilizado:
 
-### 🗂️ Estrutura do Processo
-O fluxo de tradução segue estritamente esta ordem para garantir a integridade dos arquivos:
+### 1. Processamento de Localização (`.locres`)
+Arquivos de localização direta são tratados de forma independente:
+- Exportação dos dados para formato **CSV** através do **UE4 Localizations Tool**.
+- Utilização dos utilitários na pasta `csv_scripts` para processamento e tradução.
+- Finalização e fechamento dos dados no arquivo original.
 
-1.  **Divisão (`1_json_dividir`):** O arquivo original é fatiado em pequenos pedaços JSON/CSV para evitar que a IA se perca ou corte a resposta.
-2.  **Tradução (`2_json_traduzir_tudo.py`):** A IA (via Ollama/DeepSeek) processa os arquivos, focando na criatividade e adaptação para PT-BR.
-3.  **Verificação (`3_json_verificar.py`):** Uma segunda passada de IA (LQA) com temperatura baixa verifica erros de sintaxe JSON e garante que as tags (`<cf>`, `{0}`) não foram quebradas.
-4.  **União (`4_json_juntar.py`):** Os pedaços traduzidos e verificados são remontados no arquivo original.
-5.  **Resgate (`5_json_corrigir_corrupcao.py`):** O "Script Cirurgião" pega apenas os textos traduzidos do arquivo final e injeta cirurgicamente no arquivo original intacto, prevenindo corrupção de dados da Engine.
+### 2. Processamento de Assets e Dados (`.uasset`)
+O restante do conteúdo (DataTables, Blueprints e outros assets) segue um fluxo automatizado:
+- **Extração:** Utilização do **FModel** para exportar os arquivos para a pasta de trabalho `1_RAW`.
+- **Preparação:** Execução do script `0_workflow_uasset.py` para organização e filtragem de arquivos seguros.
+- **Automação Integral:** O ciclo completo de divisão, tradução via IA, verificação e reconstrução é centralizado no script `6_processar_tudo.py`.
+
+*Nota: Esta é uma visão geral. O workflow envolve camadas de filtragem para evitar a tradução de strings técnicas que poderiam causar instabilidade na Unreal Engine 4.24.3.*
 
 ### Ferramentas Utilizadas
-- **FModel:** Para extração dos arquivos `.pak`.
-- **UAssetGUI:** Para converter arquivos `.uasset` (DataTables) em JSON e vice-versa.
-- **UnrealPak:** Para empacotar o mod final.
-- **Python + IA:** Para automação da tradução.
+- **UE Localizations Tool:** Manipulação de arquivos `.locres`.
+- **FModel:** Extração dos assets.
+- **UAssetGUI / UAssetAPI:** Manipulação de dados `.uasset`.
+- **Python 3.12+:** Automação e comunicação com modelos de IA.
 
 ### 📜 Licença e Créditos
-Este projeto é de código aberto para a comunidade. A única exigência caso você continue o projeto, publique atualizações ou crie um instalador automático no futuro é **manter o meu nome nos créditos como criador original da base da tradução**.
+Este projeto é de código aberto. Caso utilize estes scripts ou a base de tradução aqui disponibilizada para outros projetos, solicita-se a **manutenção dos créditos ao criador original**.
 
-**Créditos Iniciais:** ツFinuraBR
+**Créditos:** ツFinuraBR
