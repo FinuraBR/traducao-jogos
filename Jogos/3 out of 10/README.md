@@ -4,7 +4,7 @@
 
 ## 📌 Progresso e Status
 
-O projeto visa entregar uma **base funcional** para todos os episódios. O conteúdo traduzido é compreensível para a progressão e entendimento da história, servindo como ponto de partida para possíveis refinamentos futuros pela comunidade (ou por mim kk).
+O projeto visa entregar uma **base funcional** para todos os episódios. O conteúdo traduzido é compreensível para a progressão e entendimento da história, servindo como ponto de partida para possíveis refinamentos futuros pela comunidade.
 
 | Episódio | Status | Observação |
 | :--- | :---: | :--- |
